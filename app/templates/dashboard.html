@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+
+    <header>
+
+        <div>
+            <h1>SmartOps !! :D</h1>
+            <p>A 'Self-Healing' DevOps Platform</p>
+        </div>
+
+        <div class="status">
+            Healthy
+        </div>
+
+    </header>
+
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>CPU Usage</h3>
+            <h2>--</h2>
+        </div>
+
+        <div class="card">
+            <h3>RAM Usage</h3>
+            <h2>--</h2>
+        </div>
+
+        <div class="card">
+            <h3>Disk Usage</h3>
+            <h2>--</h2>
+        </div>
+
+        <div class="card">
+            <h3>Containers</h3>
+            <h2>--</h2>
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Recent Incidents</h2>
+
+        <p>No incidents detected.</p>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Recovery Activity</h2>
+
+        <p>No recovery actions performed.</p>
+
+    </section>
+
+
+    <section class="panel">
+
+        <h2>Recent Logs</h2>
+
+        <p>Waiting for monitoring service...</p>
+
+    </section>
+
+
+</div>
+
+{% endblock %}
