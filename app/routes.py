@@ -4,20 +4,19 @@ from app import app
 
 from monitoring.system_monitor import get_system_metrics
 
+from monitoring.docker_monitor import get_container_metrics
+
 
 @app.route("/")
 def dashboard():
 
     metrics = get_system_metrics()
+    container_data = get_container_metrics()
 
     return render_template(
-
         "dashboard.html",
-
         cpu=metrics["cpu"],
-
         ram=metrics["ram"],
-
-        disk=metrics["disk"]
-
+        disk=metrics["disk"],
+        containers=container_data["running_containers"]
     )
