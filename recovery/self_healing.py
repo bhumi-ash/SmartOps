@@ -1,4 +1,5 @@
 from recovery.recovery_engine import restart_container
+from incidents.incident_manager import log_incident
 
 
 def auto_heal(containers):
@@ -10,6 +11,8 @@ def auto_heal(containers):
         if container["status"] == "exited":
 
             result = restart_container(container["name"])
+
+            log_incident(result)
 
             recovery_results.append(result)
 

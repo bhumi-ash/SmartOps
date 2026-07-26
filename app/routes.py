@@ -8,6 +8,8 @@ from monitoring.docker_monitor import get_container_metrics
 
 from recovery.self_healing import auto_heal
 
+from incidents.incident_manager import get_incidents
+
 
 @app.route("/")
 def dashboard():
@@ -15,11 +17,13 @@ def dashboard():
     metrics = get_system_metrics()
     container_data = get_container_metrics()
     recovery_results = auto_heal(container_data["containers"])
+    incidents = get_incidents()
 
     return render_template(
         "dashboard.html",
         cpu=metrics["cpu"],
         ram=metrics["ram"],
         disk=metrics["disk"],
-        containers=container_data["running_containers"]
+        containers=container_data["running_containers"],
+        incidents=incidents
     )
