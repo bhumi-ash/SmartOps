@@ -10,6 +10,8 @@ from recovery.self_healing import auto_heal
 
 from incidents.incident_manager import get_incidents
 
+from recovery.recovery_activity import get_recoveries
+
 
 @app.route("/")
 def dashboard():
@@ -18,6 +20,7 @@ def dashboard():
     container_data = get_container_metrics()
     recovery_results = auto_heal(container_data["containers"])
     incidents = get_incidents()
+    recoveries = get_recoveries()
 
     return render_template(
         "dashboard.html",
@@ -25,5 +28,6 @@ def dashboard():
         ram=metrics["ram"],
         disk=metrics["disk"],
         containers=container_data["running_containers"],
-        incidents=incidents
+        incidents=incidents,
+        recoveries=recoveries
     )

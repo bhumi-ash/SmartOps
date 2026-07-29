@@ -80,11 +80,37 @@
 
     <section class="panel">
 
-        <h2>Recovery Activity</h2>
+    <h2>Recovery Activity</h2>
+
+    {% if recoveries %}
+
+        {% for recovery in recoveries[:5] %}
+
+            <p>
+                <strong>{{ recovery.timestamp }}</strong><br>
+
+                {{ recovery.container }}
+
+                |
+
+                {{ recovery.action }}
+
+                |
+
+                {{ recovery.status }}
+            </p>
+
+            <hr>
+
+        {% endfor %}
+
+    {% else %}
 
         <p>No recovery actions performed.</p>
 
-    </section>
+    {% endif %}
+
+</section>
 
 
     <section class="panel">
