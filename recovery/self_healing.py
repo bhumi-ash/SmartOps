@@ -1,5 +1,6 @@
 from recovery.recovery_engine import restart_container
 from incidents.incident_manager import log_incident
+from notifications.email_notifier import send_email
 
 
 def auto_heal(containers):
@@ -13,6 +14,8 @@ def auto_heal(containers):
             result = restart_container(container["name"])
 
             log_incident(result)
+
+            send_email(result)
 
             recovery_results.append(result)
 
