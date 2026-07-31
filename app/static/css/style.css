@@ -41,11 +41,26 @@ header p{
 
 .status{
 
-    background:#7DFFB3;
-    color:#1B1B1B;
-    padding:10px 20px;
-    border-radius:30px;
-    font-weight:bold;
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 20px;
+
+    border-radius:999px;
+
+    color:white;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    font-size:15px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
 }
 
 .cards{
@@ -99,4 +114,80 @@ header p{
 .panel p{
 
     color:#D7C9E8;
+}
+
+.status-circle{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:white;
+
+    animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.35);
+
+        opacity:.65;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.health-message{
+
+    margin-top:25px;
+
+    margin-bottom:30px;
+
+    padding:22px;
+
+    border-radius:18px;
+
+    background:#4f1d73;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.health-message h3{
+
+    color:#d69cff;
+
+    margin-bottom:10px;
+
+}
+
+.health-message p{
+
+    color:#efe7ff;
+
+    margin:0;
+
+    font-size:17px;
+
 }

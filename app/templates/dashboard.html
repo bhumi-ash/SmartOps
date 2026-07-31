@@ -6,16 +6,33 @@
 
     <header>
 
-        <div>
-            <h1>SmartOps !! :D</h1>
-            <p>A 'Self-Healing' DevOps Platform</p>
-        </div>
+      <div class="header-left">
 
-        <div class="status">
-            Healthy
-        </div>
+        <h1>SmartOps !! :D</h1>
+
+        <p>A Self-Healing DevOps Platform</p>
+
+      </div>
+
+      <div
+        class="status"
+        style="background-color: {{ health.color }};">
+
+        <span class="status-circle"></span>
+
+        {{ health.status.upper() }}
+
+      </div>
 
     </header>
+
+    <section class="health-message">
+
+      <h3>System Status</h3>
+
+      <p>{{ health.message }}</p>
+
+    </section>
 
 
     <section class="cards">
