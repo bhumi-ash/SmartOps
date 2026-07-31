@@ -24,7 +24,7 @@ def dashboard():
     incidents = get_incidents()
     recoveries = get_recoveries()
     health = get_health_status(
-    system_metrics,
+    metrics,
     container_data,
     recoveries
 )

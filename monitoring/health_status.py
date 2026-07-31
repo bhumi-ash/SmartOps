@@ -4,8 +4,8 @@ def get_health_status(system_metrics, container_metrics, recoveries):
     ram = system_metrics["ram"]
     disk = system_metrics["disk"]
 
-    running = container_metrics["running_containers"]
-    exited = container_metrics["exited_containers"]
+    running = container_metrics.get("running_containers", 0)
+    exited = container_metrics.get("exited_containers", 0)
 
     if exited > 0:
 
