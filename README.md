@@ -1,6 +1,8 @@
 # SmartOps
 
 > **A self-healing monitoring and automation tool for Docker-based applications.**
+[![CI Pipeline](https://github.com/bhumi-ash/SmartOps/actions/workflows/smartops-ci.yml/badge.svg)](https://github.com/bhumi-ash/SmartOps/actions/workflows/smartops-ci.yml)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker&logoColor=white)
 
 Monitor • Detect • Recover • Notify
 
