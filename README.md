@@ -88,7 +88,7 @@ The application itself is fully containerized using Docker and uses GitHub Actio
       +----------------+               +----------------+
 ```
 
-## 🚀 Getting Started
+## To begin with:
 
 ### Clone the Repository
 
