@@ -1,6 +1,6 @@
 # SmartOps
 
-> **A Self-Healing DevOps Platform**
+> **A self-healing monitoring and automation tool for Docker-based applications.**
 
 Monitor • Detect • Recover • Notify
 
