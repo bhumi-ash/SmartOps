@@ -8,11 +8,9 @@ Monitor • Detect • Recover • Notify
 
 ## Overview
 
-SmartOps is a self-healing DevOps platform built using Python, Flask, Docker, and GitHub Actions.
+SmartOps is an automated operations platform built to demonstrate modern DevOps practices in a practical environment. The application monitors the health of Docker containers and system resources, automatically recovers failed services, maintains operational logs, and provides real-time visibility through a web dashboard.
 
-The platform continuously monitors system resources and Docker containers. When a monitored container stops unexpectedly, SmartOps automatically detects the failure, restarts the container, logs the incident, records the recovery action, and sends an email notification to the administrator.
-
-The application itself is fully containerized using Docker and uses GitHub Actions for Continuous Integration.
+The project follows a modular architecture and integrates technologies such as Docker, Docker Compose, GitHub Actions, and SMTP-based notifications to simulate real-world infrastructure automation workflows.
 
 ---
 
